@@ -30,6 +30,10 @@ const routes: RouteRecordRaw[] = [
       },
     ],
   },
+  {
+    path: '/users/:id',
+    component: () => import('@/views/Users/UserPage.vue'),
+  }
 ];
 
 const router = createRouter({
