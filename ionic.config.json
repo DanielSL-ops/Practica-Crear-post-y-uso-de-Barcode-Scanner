@@ -1,0 +1,7 @@
+{
+  "name": "pedidos-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
