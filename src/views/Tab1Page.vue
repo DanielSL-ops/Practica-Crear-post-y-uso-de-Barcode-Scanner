@@ -23,23 +23,8 @@
 </template>
 
 <script setup lang="ts">
-import { Usuarios } from '@/interfaces/usuarios';
+import { useUsuarios } from '@/composables/useUsuarios';
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonLabel } from '@ionic/vue';
-import { ref } from 'vue';
 
-const usuarios = ref<Usuarios[]>([]);
-
-function cargarUsuarios(){
-
-  fetch('https://jsonplaceholder.typicode.com/users')
-  .then(response => response.json())
-  .then(json => {
-    console.log(json);
-    usuarios.value = json;
-
-  })
-
-}
-cargarUsuarios();
-
+const { usuarios } = useUsuarios();
 </script>
