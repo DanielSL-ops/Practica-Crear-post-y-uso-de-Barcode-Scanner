@@ -28,12 +28,16 @@ const routes: RouteRecordRaw[] = [
         path: 'tab3',
         component: () => import('@/views/Tab3Page.vue'),
       },
+      {
+        path: 'tab4',
+        component: () => import('@/views/Tab4Page.vue'),
+      },
     ],
   },
   {
     path: '/users/:id',
     component: () => import('@/views/Users/UserPage.vue'),
-  }
+  },
 ];
 
 const router = createRouter({

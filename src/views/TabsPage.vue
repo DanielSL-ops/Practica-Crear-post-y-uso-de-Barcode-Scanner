@@ -17,6 +17,11 @@
           <ion-icon aria-hidden="true" :icon="createOutline" />
           <ion-label>Crear</ion-label>
         </ion-tab-button>
+
+        <ion-tab-button tab="tab4" href="/tabs/tab4">
+          <ion-icon aria-hidden="true" :icon="keyOutline" />
+          <ion-label>DS4</ion-label>
+        </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
   </ion-page>
@@ -24,5 +29,5 @@
 
 <script setup lang="ts">
 import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage, IonRouterOutlet } from '@ionic/vue';
-import { createOutline, ellipse, people } from 'ionicons/icons';
+import { createOutline, ellipse, keyOutline, people } from 'ionicons/icons';
 </script>

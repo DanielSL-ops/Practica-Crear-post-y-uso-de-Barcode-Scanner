@@ -6,6 +6,15 @@ import { defineConfig } from 'vitest/config';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue(), legacy()],
+  server: {
+    proxy: {
+      '/ds4-api': {
+        target: 'https://ds4-demo-5w8lmtds.on-forge.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/ds4-api/, '/api'),
+      },
+    },
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
